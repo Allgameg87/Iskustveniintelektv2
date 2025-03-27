@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогнозирование риска диабета</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="gradient-bg">
+        <div class="header-container">
+            <h1>Прогнозирование риска диабета 2-го типа</h1>
+            <p>Искусственный интеллект для ранней диагностики и профилактики</p>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <a href="#problem" class="nav-item">Проблема</a>
+            <a href="#data-sources" class="nav-item">Данные</a>
+            <a href="#analysis" class="nav-item">Анализ</a>
+            <a href="#model" class="nav-item">Модель</a>
+            <a href="#deployment" class="nav-item">Развертывание</a>
+        </div>
+    </nav>
+
+    <section class="section" id="problem">
+        <div class="section-header">
+            <h2>Реальная проблема и SMART-цели</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="problem-container">
+            <div class="problem-text">
+                <p><strong>Проблема:</strong> Раннее выявление риска развития диабета 2-го типа у пациентов для своевременной профилактики и снижения медицинских рисков.</p>
+                <div class="smart-goals">
+                    <div class="goal-card">
+                        <h3>Специфичность</h3>
+                        <p>Разработка прогнозной модели для выявления риска диабета.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3>Измеримость</h3>
+                        <p>Точность прогноза ≥85% на тестовой выборке.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3>Достижимость</h3>
+                        <p>Использование открытых данных и стандартных алгоритмов машинного обучения.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3>Реалистичность</h3>
+                        <p>Модель для использования в реальных клиниках.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3>Срок</h3>
+                        <p>Разработка прототипа за 3 месяца.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="data-sources">
+        <div class="section-header">
+            <h2>Потенциальные источники данных</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="data-container">
+            <div class="data-type">
+                <h3>Типы данных</h3>
+                <ul class="data-list">
+                    <li>Демографические данные (возраст, пол, этническая принадлежность)</li>
+                    <li>Антропометрические показатели (вес, рост, ИМТ)</li>
+                    <li>Лабораторные показатели (уровень глюкозы, холестерин, триглицериды)</li>
+                    <li>Медицинская история (наличие гипертонии, курение, наследственность)</li>
+                </ul>
+            </div>
+            <div class="sources">
+                <h3>Источники данных</h3>
+                <ul class="source-list">
+                    <li>UCI Machine Learning Repository (например, датасет "Diabetes 130-US hospitals")</li>
+                    <li>Kaggle (например, "Diabetes Prediction Dataset")</li>
+                    <li>Сотрудничество с клиниками для доступа к анонимизированным данным пациентов</li>
+                    <li>Публичные исследования (например, NHANES)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="analysis">
+        <div class="section-header">
+            <h2>Стратегия анализа данных</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="analysis-steps">
+            <div class="step-card">
+                <h3>Предварительный просмотр данных</h3>
+                <p>Проверка пропущенных значений, распределение целевой переменной.</p>
+            </div>
+            <div class="step-card">
+                <h3>Визуализация</h3>
+                <p>Гистограммы распределения возраста, ИМТ, уровня глюкозы. Корреляционная матрица для выявления связей между признаками.</p>
+            </div>
+            <div class="step-card">
+                <h3>Исследование</h3>
+                <p>Поиск ключевых факторов риска (например, уровень глюкозы, ИМТ). Анализ групп пациентов (например, связь между возрастом и риском).</p>
+            </div>
+            <div class="step-card">
+                <h3>Подготовка данных</h3>
+                <p>Разделение на тренировочную и тестовую выборки (80/20). Балансировка классов (если данные несбалансированы).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="model">
+        <div class="section-header">
+            <h2>Выбор модели</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="model-section">
+            <div class="model-choice">
+                <h3>Случайный лес (Random Forest)</h3>
+                <p>Интерпретируемость, скорость, точность</p>
+            </div>
+            <div class="model-advantages">
+                <div class="advantage">
+                    <h4>Преимущества</h4>
+                    <ul>
+                        <li>Визуализация важности признаков</li>
+                        <li>Устойчивость к выбросам</li>
+                        <li>Скорость обучения на относительно небольших данных</li>
+                    </ul>
+                </div>
+                <div class="alternative">
+                    <h4>Альтернативы</h4>
+                    <ul>
+                        <li>Логистическая регрессия (для базового сравнения)</li>
+                        <li>XGBoost (для повышения точности, но сложнее в интерпретации)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="training">
+        <div class="section-header">
+            <h2>Обучение и оценка</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="training-container">
+            <div class="metric-box">
+                <h3>Метрики</h3>
+                <div class="metric">
+                    <span class="value">87%</span>
+                    <span class="label">Accuracy</span>
+                </div>
+                <div class="metric">
+                    <span class="value">0.92</span>
+                    <span class="label">AUC-ROC</span>
+                </div>
+            </div>
+            <div class="features-box">
+                <h3>Ключевые признаки</h3>
+                <ul class="feature-list">
+                    <li>Уровень глюкозы (40%)</li>
+                    <li>ИМТ (25%)</li>
+                    <li>Возраст (15%)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="deployment">
+        <div class="section-header">
+            <h2>Развертывание</h2>
+            <div class="gradient-divider"></div>
+        </div>
+        <div class="deployment-container">
+            <div class="deployment-card">
+                <h3>Где и как</h3>
+                <p>Веб-приложение для врачей и пациентов (например, на Flask или Streamlit).</p>
+            </div>
+            <div class="deployment-card">
+                <h3>Кто будет использовать</h3>
+                <ul>
+                    <li>Врачи: Для диагностики на приёме.</li>
+                    <li>Пациенты: Для мониторинга своего состояния.</li>
+                </ul>
+            </div>
+            <div class="deployment-card">
+                <h3>Польза</h3>
+                <p>Для пациентов: Раннее выявление риска и профилактика. Для клиник: Снижение нагрузки на систему здравоохранения за счет предотвращения осложнений.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p>© 2024 Машинное обучение в медицине</p>
+            <p>Разработал: Чиркин Елизар</p>
+        </div>
+    </footer>
+</body>
+</html>
